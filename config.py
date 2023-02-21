@@ -2,7 +2,7 @@
 
 class Config:
     COINT_MARKET_URL = 'https://pro-api.coinmarketcap.com'
-    COINT_MARKET_API_KEY = '19bc5ef9-2916-40d2-b4f6-4b490c8bfd43'
+    COINT_MARKET_API_KEY = ''
     FAKE_RESPONSE = '''
         {
     "status": {
