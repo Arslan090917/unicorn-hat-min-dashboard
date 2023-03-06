@@ -32,8 +32,7 @@ class Main:
         self.count = 0
 
     def create_text(self) -> None:
-        self.coin.update_crypto_data()
-        self.text = f'{datetime.strftime(self.date, "%H%M")} || BTC:{self.coin.data["BTC"]} || HFT:{self.coin.data["HFT"]}'
+        self.text = f'{datetime.strftime(self.date, "%H:%M")} || BTC:{self.coin.data["BTC"]} || HFT:{self.coin.data["HFT"]}'
         print('update text')
     
     def create_image(self) -> None:
@@ -78,7 +77,7 @@ class Main:
                 offset_x = 0
             self.unicorn.show()
             # a = False
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.05)
 
     async def minute_pass(self):
         while True:
@@ -89,8 +88,7 @@ class Main:
                 self.create_image()
                 self.count += 1
             else:
-                print('await 3 sec update_text()')
-                await asyncio.sleep(1)
+                await asyncio.sleep(0)
 
     async def update_cryptocurrency_data(self):
         while True:
@@ -100,7 +98,7 @@ class Main:
                 logging.warning('INFO system get data from coinmarketcup every 20 minutes')
                 self.count = 0
             else:
-                await asyncio.sleep(1)
+                await asyncio.sleep(0)
 
 
 if __name__ == "__main__":

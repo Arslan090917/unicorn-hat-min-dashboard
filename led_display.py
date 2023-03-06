@@ -182,7 +182,7 @@ class UnicornDashboard:
                 offset_x = 0
             self.unicorn.show()
             # a = False
-            time.sleep(0.05)
+            time.sleep(0.5)
             await asyncio.sleep(0)
             print('check time')
 
@@ -204,4 +204,3 @@ if __name__ == "__main__":
         io_loops.create_task(dash.display_info())
     ]
     io_loops.run_until_complete(asyncio.wait(task))
-    io_loops.close()

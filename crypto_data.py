@@ -7,6 +7,12 @@ import requests
 
 from config import Config
 
+logging.basicConfig(
+    filename='error.log',
+    format='%(asctime)s %(levelname)s:%(message)s',
+      encoding='utf-8',
+        level=logging.WARNING)
+
 class Coinmarketcup:
     def __init__(self) -> None:
         self.session = requests.Session()
